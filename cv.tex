@@ -1,0 +1,116 @@
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{burgundy}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.93]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+% \setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Ben}{Faingold}
+\title{Fullstack Developer \&\newline{}DevOps Engineer}                               % optional, remove / comment the line if not wanted
+\address{Henrietta Szold St 30/22}{4953250 Petah Tikva}{Israel}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{054-8360015}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\email{benfaingold@gmail.com}                               % optional, remove / comment the line if not wanted
+% \homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+\social[linkedin]{ben-faingold}                        % optional, remove / comment the line if not wanted
+\social[twitter]{MrStarktastic}                             % optional, remove / comment the line if not wanted
+\social[github]{MrStarktastic}                              % optional, remove / comment the line if not wanted
+% \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+\photo[60pt][0.4pt]{pic.jpeg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+% \quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Summary}
+Versatile, quick learner, autodidact and often told to have a skillset comprising an entire tech department.\newline
+Looking for either a position of Fullstack, DevOps or a mix of both.
+
+\section{Education}
+\cventry{2015--2019}{Maths with CS Minor}{The Hebrew University of Jerusalem}{Israel}{}{Expected to resume studies via The Open University in Q4 2020.\newline{}%
+Coursework:%
+\begin{itemize}
+  \item Linear Algebra, Discrete Mathematics, Infinitesimal Calculus, Probability Theory
+  \item Data Structures, Introduction to Object-Oriented Programming, Programming Workshop C/C++
+  \item Introduction to Machine Learning, Operating Systems, Nand2Tetris
+  \item Introduction to Technological Entrepreneurship
+\end{itemize}%
+As a student, I was always the go-to guy if anyone needed help with a programming task.\newline{}%
+Achieved high grades in all programming courses.}
+
+\section{Experience}
+\cventry{May 2020 -- Present}{DevOps Engineer}{Zoomin Software}{Tel-Aviv}{}{
+\begin{itemize}%
+\item Managed Docker containers via ECS that host customer sites
+\item Implemented various automations:
+  \begin{itemize}%
+  \item Postgres log collector that generates graphical reports and sends them to S3 and Slack
+  \item Site24x7 monitoring agent installer via Rundeck
+  \item Lambda function triggered by CSV file uploads to S3 which analyzes the data in them with a 3rd party API and appends columns to the files
+  \item GitHub pipelines
+  \end{itemize}
+\item Spun up a POC server with Elastic Search Enterprise
+\item Wrote infrastrcture as code using AWS CDK to facilitate deployment for every new customer
+\end{itemize}}
+\cventry{Aug 2017 -- Apr 2020}{Fullstack Web Developer \& DevOps Engineer}{Gamitee}{Jersualem}{}{
+  First employee in the travel-tech startup.%
+\begin{itemize}%
+\item Applied significant changes to both the frontend and backend (Node.js) aspects of the web application.
+\item Led an infrastructure overhaul on AWS from scratch:
+  \begin{itemize}%
+  \item Scalable and load-balanced servers
+  \item CI/CD (Jenkins \& CodePipeline)
+  \item Docker containers that simulate a local environment for testing purposes
+  \item Secured with Dome9
+  \item Lambda functions as microservices
+  \item MongoDB/Redis databases
+  \item Orchestrated with Terraform (Infrastructure as code)
+  \end{itemize}
+\item Built automations and tools that streamlined the development process for others
+\end{itemize}}
+
+\section{Skills}
+\cvlistdoubleitem{JavaScript, TypeScript, Python}{Swift, Java, Kotlin (iOS \& Android)}
+\cvlistdoubleitem{C/C++, C\#}{Bash, Go}
+
+\section{Languages}
+\cvitemwithcomment{English}{Native proficiency with natrual accent}{}
+\cvitemwithcomment{Hebrew}{Native proficiency}{}
+\cvitemwithcomment{Russian}{Professional working proficiency}{}
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.
